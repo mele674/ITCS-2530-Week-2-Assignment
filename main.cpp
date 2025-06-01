@@ -25,9 +25,13 @@ int main()
     string s1 = "The cost of producing " + to_string(container) + " container(s) of cheese is: ";  
 	string s2 = "The profit from selling " + to_string(container) + " container(s) of cheese is: ";
     
-	cout << setw(50) << left << "The number of containers to hold the cheese is: " << setw(10) << right << container << endl;
+
+
+    
+	cout << fixed << setprecision(2);
+	cout << setw(50) << left << "The number of containers to hold the cheese is: " << setw(15) << right << container << endl;
     cout << setw(50) << left << s1 << setw(10) << right << '$' << container * cost << endl;  
-	cout << setw(50) << left << s2 << setw(10) << right << '$' << container * profit << endl;
+	cout << setw(50) << left << s2 << setw(8) << right << '$' << container * profit << endl;
     return 0;  
 }
 
